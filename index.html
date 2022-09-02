@@ -2,84 +2,82 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
-        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Calculator Bootstrap</title>
+ <link rel="stylesheet" href="style.css">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+  integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <div class="container">
-        <br>
-        <div class="row d-flex justify-content-center">
-            <div class="col-12 header d-flex flex-column align-items-center justify-content-center">
-                <h1 class="text-break">CALCULATOR</h1>
-                <h3 class="text-break ">MADE BY MUHAMMAD FAYYAZ ANSARI</h3>
-                <br>
-            </div>
-            <div class="col-12 col-sm-12 col-md-4">
-                <table class="table table-dark table-striped table-bordered">
-                    <thead>
-                        <tr>
-                            <th scope="col" colspan="4">
-                                <div class="input-group input-group-lg">
-                                    <input dir="rtl" type="text" class="form-control" aria-label="Sizing example input"
-                                        aria-describedby="inputGroup-sizing-lg">
-                                </div>
-                            </th>
+<!-- <input type="text" dir="rtl" id="test"> -->
+ <div class="container">
+  <div class="row d-flex justify-content-center p-0 m-0">
+   <div class="col-12 header d-flex flex-column align-items-center justify-content-center">
+    <h2 class="text-break m-0">CALCULATOR</h2>
+    <h6 class="text-break ">DEVELOPED BY MUHAMMAD FAYYAZ ANSARI</h6>
 
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr >
-                            <td class="text-center p-3">%</td>
-                            <td class="text-center p-3">CE</td>
-                            <td class="text-center p-3">C</td>
-                            <td class="text-center p-3"><i class="fa-solid fa-delete-left"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="text-center p-3">1/x</td>
-                            <td class="text-center p-3">x<sup>2</sup></td>
-                            <td class="text-center p-3">2/x</td>
-                            <td class="text-center p-3">/</td>
-                        </tr>
-                        <tr>
-                            <td class="text-center p-3"><h5>7</h5></td>
-                            <td class="text-center p-3"><h5>8</h5></td>
-                            <td class="text-center p-3"><h5>9</h5></td>
-                            <td class="text-center p-3"><h5>x</h5></td>
-                        </tr>
-                        <tr>
-                            <td class="text-center p-3"><h5>4</h5></td>
-                            <td class="text-center p-3"><h5>5</h5></td>
-                            <td class="text-center p-3"><h5>6</h5></td>
-                            <td class="text-center p-3"><h5>-</h5></td>
-                        </tr>
-                        <tr>
-                            <td class="text-center p-3"><h5>1</h5></td>
-                            <td class="text-center p-3"><h5>2</h5></td>
-                            <td class="text-center p-3"><h5>3</h5></td>
-                            <td class="text-center p-3"><h5>+</h5></td>
-                        </tr>
-                        <tr>
-                            <td class="text-center p-3"><h6>+/-</h6></td>
-                            <td class="text-center p-3"><h5>0</h5></td>
-                            <td class="text-center p-3"><h5>.</h5></td>
-                            <td class="text-center p-3"><h5>=</h5></td>
-                        </tr>
-                     
-
-                    </tbody>
-                </table>
-            </div>
+   </div>
+   <div class="col-11 col-xs-9 col-sm-8 col-md-6 col-lg-4 calculatoDiv px-sm-0">
+    <table class="table table-borderless table-responsive table-bgcolor">
+     <thead>
+      <tr>
+       <th scope="col" colspan="4">
+        <!-- <input  id="smallInput" dir="rtl" class="form-control smallInput" type="text" readonly> -->
+        <div class="d-flex justify-content-end">
+         <p class="text-break smallInput" id="smallInput">&nbsp;</p>
         </div>
-    </div>
+        <div class="myinput input-group input-group-lg ">
+         <input id="largeInput" dir="rtl" type="number" class="myinput form-control form-control-lg" placeholder="0"
+          aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+        </div>
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td class="text-center py-3"> <button onclick="square()">x<sup>2</sup></button></td>
+       <td class="text-center py-3"> <button onclick="percentage()"> %</button></td>
+       <td class="text-center py-3"> <button onclick="allClear()"> C</button></td>
+       <td class="text-center py-3"> <button onclick="characterDelete()"> <i class="fa-solid fa-delete-left"></i></button></td>
+      </tr>
+      <tr>
+       <td class="text-center py-3"> <button onclick="getNumber('7')"><h5>7</h5></button></td>
+       <td class="text-center py-3"> <button onclick="getNumber('8')"><h5>8</h5></button></td>
+       <td class="text-center py-3"> <button onclick="getNumber('9')"><h5>9</h5></button></td>
+       <td class="text-center py-3"> <button onclick="getOperator('/')"><h5>/</h5></button></td>
+      </tr>
+      <tr>
+       <td class="text-center py-3"> <button onclick="getNumber('4')"><h5>4</h5></button></td>
+       <td class="text-center py-3"> <button onclick="getNumber('5')"><h5>5</h5></button></td>
+       <td class="text-center py-3"> <button onclick="getNumber('6')"><h5>6</h5></button></td>
+       <td class="text-center py-3"> <button onclick="getOperator('*')"><h5>x</h5></button></td>
+      </tr>
+      <tr>
+       <td class="text-center py-3"> <button onclick="getNumber('1')"><h5>1</h5></button></td>
+       <td class="text-center py-3"> <button onclick="getNumber('2')"><h5>2</h5></button></td>
+       <td class="text-center py-3"> <button onclick="getNumber('3')"><h5>3</h5></button></td>
+       <td class="text-center py-3"> <button onclick="getOperator('-')"><h5>-</h5></button></td>
+      </tr>
+      <tr>
+       <td class="text-center py-3"> <button onclick="getNumber('.')"><h6>.</h6></button></td>
+       <td class="text-center py-3"> <button onclick="getNumber('0')"><h5>0</h5></button></td>
+       <td class="text-center py-3"> <button onclick="result()"><h5>=</h5></button>
+       </td>
+       <td class="text-center py-3"> <button onclick="getOperator('+')"><h5>+</h5></button>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+  </div>
+ </div>
+ <script src="./app.js"></script>
 </body>
 
 </html>

@@ -1,6 +1,88 @@
+/* #34495e
+#2c3e50 */
+
+
 body{
-    
+    /* background: #833ab4;  /* fallback for old browsers */
+/* background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);  /* Chrome 10-25, Safari 5.1-6 */
+/* background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: #6441A5;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2a0845, #6441A5);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2a0845, #6441A5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     /* #0d0d26 */
-    background-color: #061306 !important;
+    /* background-color: #061306 !important; *3
+    /* background-color: #2c3e50 !important; */
+    /* background-color: rgba(44, 62, 80,0.8) !important; */
+    /* background-color: rgba(00, 00, 00,0.9) !important; */
+    /* background: rgb(2,0,36);
+background: linear-gradient(90deg,rgba(9,9,121,1) 30%, rgba(0,212,255,1) 50%); */
+/* background: linear-gradient(90deg, rgba(2,0,36,1) 20%, rgba(9,9,121,1) 50%, rgba(2,0,36,1) 10%); */
     color: #ffffff !important;
+}
+.calculatoDiv{
+    border-radius: 20px;
+    padding-top:20px ;
+    /* background-color: #343A40; */
+    background: #6441A5;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #2a0845, rgb(65, 38, 116));  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #2a0845, rgb(65, 38, 116)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.smallInput{
+    /* color:antiquewhite !important; */
+    color: #ffffff !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    outline: none !important;
+}
+.myinput::-webkit-outer-spin-button,
+.myinput::-webkit-inner-spin-button{
+-webkit-appearance: none;
+margin: 0;
+}
+
+.myinput[type=number]{
+    -moz-appearance: textfield;
+}
+.myinput{
+    color: #2a0845 !important;
+    font-size: 40px !important;
+    border-radius: 50px !important;
+    font-weight: 500 !important;
+    box-shadow: none !important;
+    caret-color: transparent !important;
+}
+.myinput:active,.myinput:focus{
+    border: none !important;
+}
+button{
+    display: inline-block;
+    border-radius: 50% !important;
+    border: none;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    transition: 0.3s ease;
+    background-color: #6441A5;
+    color: #ffffff;
+    font-weight: bolder;
+    box-shadow: inset 8px 7px 20px #2a0845, 5px 5px 12px rgb(0 0 0 / 16%);
+}
+
+.isEqualButton{
+    display: inline-block;
+    /* background-color: aqua; */
+    width: 145px;
+    border-radius: 50px !important;
+  
+}
+button:hover{
+    background-color: #2a0845 !important;
+    color: #ffffff !important;
+    
+}
+button:focus{
+outline: none !important;
 }
