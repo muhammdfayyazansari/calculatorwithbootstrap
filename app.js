@@ -5,6 +5,8 @@ var numberStored;
 var flag = false;
 var resultFlag = true;
 var repeatOperator = [];
+var percentShow;
+var finalPercentage;
 function getNumber(num) {
   if(numberStored == "square"){
     numberStored = 0;
@@ -62,10 +64,10 @@ function allClear() {
   window.location.reload();
 }
 function characterDelete() {
-  if (resultFlag && numberStored.length > 1) { // for after result smallinput.innerHTML none and don't do it again befor doing any other operation
+  if (resultFlag && numberStored.length >= 1) { // for after result smallinput.innerHTML none and don't do it again befor doing any other operation
     console.log("resultFlag numberstored: " + numberStored)
-    var a = numberStored;
-    var b = a.slice(0, numberStored.length - 1);
+    // var a = numberStored;
+    var b = numberStored.slice(0, numberStored.length - 1);
     var c = largeInput.value.slice(0, largeInput.value.length - 1);
     numberStored = b;
     largeInput.value = c;
@@ -86,6 +88,10 @@ function result() {
   console.log(repeatOperator);
   resultOper = "fayyaz";
   resultFlag = false;
+  if(percentShow){
+    smallInput.innerHTML = percentShow;
+    largeInput.value = finalPercentage;
+  }
 }
 function square() {
   if (numberStored) {
@@ -99,14 +105,16 @@ function square() {
   }
   numberStored = "square";
 }
-window.keycode()
 function percentage(){
   var result;
-  var ab = "12546+2*3*2-3*4/5";
+  var ab = numberStored;
   var abc = ab.split("");
   var index = [];
   var indexValue =[];
   var count=0;
+  var total;
+  var operator;
+  var obtained;
   for (var i = 0; i < abc.length; i++) {
     var a = abc[i];
     if (a == "+" || a == "-" || a == "*" || a == "/") {
@@ -118,6 +126,41 @@ function percentage(){
     }
   }
   console.log('result bjoin', abc)
+  result = abc;
+  var arr = [];
+  var arrIndex = [];
+  var arrValue=[];
+  var c=0;
+  for (var i = 0; i < abc.length; i++) {
+    var a = abc[i];
+    var b ;
+    var flag = true;
+    if (a == "+" || a == "-" || a == "*" || a == "/") {
+      b = result.slice(c,i);
+      b=b.join("");
+      arr.push(b);
+      arr.push(a);
+      arrIndex.push(i);
+      c = i+1;
+    }else if(flag && (i==abc.length-1)){
+      var a = Number(arrIndex.slice(-1))+1;
+      var b = result.slice(a).join("");
+      arr.push(b);
+      total = arr.slice(0,-2).join("");
+      operator = arr.slice(-2,-1).join("");
+      obtained = arr.slice(-1).join("");
+      var process =eval(total)+operator+(eval(total)/100*obtained);
+      flag= false;
+    }else{arrValue.push(a);}
+  }
+  finalPercentage = eval(process);
+  smallInput.innerHTML = process;
+  largeInput.value =(eval(total)/100*obtained);
+  percentShow = process + "=";
+  numberStored = finalPercentage;
+  console.log('main arr after ',arr)
+  console.log('final percentage arr after ',finalPercentage)
+  // console.log('copy array : ', arr.slice(0,-2))
   result = abc.join("");
   // var forPercentage = result.split("+");
   console.log('result ajoin', result)
