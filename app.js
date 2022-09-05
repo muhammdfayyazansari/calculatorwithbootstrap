@@ -57,11 +57,12 @@ function getOperator(operator) {
   flag = true;
 }
 function allClear() {
+  numberStored = "";
   largeInput.value = "";
-  smallInput.value = "";
+  smallInput.innerHTML = "&nbsp";
   arr = [];
   console.log(arr);
-  window.location.reload();
+  // window.location.reload();
 }
 function characterDelete() {
   if (resultFlag && numberStored.length >= 1) { // for after result smallinput.innerHTML none and don't do it again befor doing any other operation
@@ -163,6 +164,23 @@ function percentage(){
   // console.log('copy array : ', arr.slice(0,-2))
   result = abc.join("");
   // var forPercentage = result.split("+");
-  console.log('result ajoin', result)
-  
+  console.log('result ajoin', result);
 }
+window.addEventListener('keydown',(e)=>{
+  var b= e.key;
+  var a= b.charCodeAt(0);
+  if(a>=48 && a<=57){
+    getNumber(b);
+    console.log("keycode ",a)
+    console.log("key ",b)
+    console.log('typte of keycode:',typeof a)
+    console.log('type of keytypeof',typeof b)
+  }
+  if(a>=48 && a<=57){
+    getNumber(b);
+    console.log("keycode ",a)
+    console.log("key ",b)
+    console.log('typte of keycode:',typeof a)
+    console.log('type of keytypeof',typeof b)
+  }
+}) 
