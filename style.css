@@ -12,6 +12,9 @@ background: linear-gradient(to right, #2a0845, #6441A5); /* W3C, IE 10+/ Edge, F
 
     color: #ffffff !important;
 }
+.mainDiv{
+    height: 100vh;
+}
 .calculatoDiv{
     border-radius: 20px;
     padding-top:20px ;

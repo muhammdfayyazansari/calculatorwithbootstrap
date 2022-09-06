@@ -9,7 +9,7 @@ var percentShow;
 var finalPercentage;
 var squareFlag;
 var forDecimal;
-var decimalAfter =false;
+var decimalAfter = false;
 function getNumber(num) {
   var numOperator = num.charCodeAt(0);
   if (numOperator >= 48 && numOperator <= 57 || numOperator == 46) {
@@ -24,7 +24,8 @@ function getNumber(num) {
       numberStored += num;
     }
     if (numOperator == 46) {
-      console.log("numberstored before ",numberStored)
+      console.log("numberstored before ", numberStored)
+      
       if (numberStored.slice(-2, -1) == "." && numberStored(-1) == ".") {
         numberStored = numberStored.slice(0, -1);
       }
@@ -34,21 +35,21 @@ function getNumber(num) {
       console.log('fordecimal', forDecimal);
       console.log('numberstored in for decimal', numberStored);
       largeInput.value = numberStored;
-     if(decimalAfter){
-      var a = numberStored;
-      var forShow;
-      for(var i=a.length-1; i>=0; i--){
-        var b = a.charAt(i);
-        var c = b.charCodeAt(0);
-        if(c == 42 || c == 43 || c == 45 || c == 47){
-          forShow = numberStored.slice(i+1);
-          break;
+      if (decimalAfter) {
+        var a = numberStored;
+        var forShow;
+        for (var i = a.length - 1; i >= 0; i--) {
+          var b = a.charAt(i);
+          var c = b.charCodeAt(0);
+          if (c == 42 || c == 43 || c == 45 || c == 47) {
+            forShow = numberStored.slice(i + 1);
+            break;
+          }
+          console.log('c', c)
         }
-        console.log('c', c)
+        largeInput.value = forShow;
+        console.log('forshow', forShow)
       }
-      largeInput.value = forShow;
-      console.log('forshow', forShow)
-     }
     }
     flag = false;
   }
